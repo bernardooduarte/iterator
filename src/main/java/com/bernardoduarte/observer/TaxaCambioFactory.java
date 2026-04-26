@@ -1,4 +1,4 @@
-package com.bernardoduarte.decorator;
+package com.bernardoduarte.observer;
 
 public abstract class TaxaCambioFactory {
     public abstract TaxaCambio criarTaxa(double valorEmReais);

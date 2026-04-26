@@ -1,10 +1,10 @@
-package com.bernardoduarte.decorator;
+package com.bernardoduarte.observer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DecoratorApplicationTests {
+class ObserverApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,6 +1,6 @@
-package com.bernardoduarte.decorator;
+package com.bernardoduarte.observer;
 
-public class FormatadorRealBrasileiro extends FormatadorDecorator {
+public class FormatadorRealBrasileiro extends FormatadorObserver {
 
     public FormatadorRealBrasileiro(FormatadorValor formatadorInterno) {
         super(formatadorInterno);

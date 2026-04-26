@@ -1,13 +1,13 @@
-package com.bernardoduarte.decorator;
+package com.bernardoduarte.observer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DecoratorApplication {
+public class ObserverApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DecoratorApplication.class, args);
+		SpringApplication.run(ObserverApplication.class, args);
 	}
 
 }

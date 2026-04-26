@@ -1,6 +1,6 @@
-package com.bernardoduarte.decorator;
+package com.bernardoduarte.observer;
 
-public class FormatadorDolarAmericano extends FormatadorDecorator {
+public class FormatadorDolarAmericano extends FormatadorObserver {
 
     public FormatadorDolarAmericano(FormatadorValor formatadorInterno) {
         super(formatadorInterno);

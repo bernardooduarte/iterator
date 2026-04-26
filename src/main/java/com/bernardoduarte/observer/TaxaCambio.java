@@ -1,4 +1,4 @@
-package com.bernardoduarte.decorator;
+package com.bernardoduarte.observer;
 
 public abstract class TaxaCambio {
 
@@ -18,6 +18,10 @@ public abstract class TaxaCambio {
 
     public double getValorEmReais() {
         return valorEmReais;
+    }
+
+    public void setValorEmReais(double valorEmReais) {
+        this.valorEmReais = valorEmReais;
     }
 
     public void setFormatador(FormatadorValor formatador) {
