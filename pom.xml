@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bernardoduarte</groupId>
-	<artifactId>decorator</artifactId>
+	<artifactId>chain-of-responsability</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
+	<name>Chain of Responsability</name>
 	<description/>
 	<url/>
 	<licenses>
