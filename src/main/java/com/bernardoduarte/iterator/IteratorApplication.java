@@ -1,13 +1,13 @@
-package com.bernardoduarte.visitor;
+package com.bernardoduarte.iterator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VisitorApplication {
+public class IteratorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VisitorApplication.class, args);
+		SpringApplication.run(IteratorApplication.class, args);
 	}
 
 }

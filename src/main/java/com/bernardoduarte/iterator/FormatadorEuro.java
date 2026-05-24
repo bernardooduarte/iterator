@@ -1,4 +1,4 @@
-package com.bernardoduarte.visitor;
+package com.bernardoduarte.iterator;
 
 public class FormatadorEuro extends FormatadorEncadeado {
 
@@ -11,3 +11,5 @@ public class FormatadorEuro extends FormatadorEncadeado {
 		return "EUR " + formatadorInterno.formatar(valor);
 	}
 }
+
+

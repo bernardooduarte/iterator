@@ -1,4 +1,4 @@
-package com.bernardoduarte.visitor;
+package com.bernardoduarte.iterator;
 
 public class FormatadorDolarAmericano extends FormatadorEncadeado {
 
@@ -11,3 +11,5 @@ public class FormatadorDolarAmericano extends FormatadorEncadeado {
 		return "US$ " + formatadorInterno.formatar(valor);
 	}
 }
+
+

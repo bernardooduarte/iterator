@@ -1,4 +1,4 @@
-package com.bernardoduarte.visitor;
+package com.bernardoduarte.iterator;
 
 public class LibraEsterlinaFactory extends TaxaCambioFactory {
 	@Override
@@ -11,3 +11,5 @@ public class LibraEsterlinaFactory extends TaxaCambioFactory {
 		return new FormatadorLibraEsterlina(new FormatadorBase());
 	}
 }
+
+

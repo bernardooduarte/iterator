@@ -1,17 +1,17 @@
-package com.bernardoduarte.visitor;
+package com.bernardoduarte.iterator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-public class GerenciadorTaxaCambioVisitor {
+public class GerenciadorTaxaCambio implements Iterable<TaxaCambio> {
 
 	private final List<TaxaCambio> taxas = new ArrayList<>();
 	private final Map<String, TaxaCambioFactory> fabricas = new HashMap<>();
-	private final ExibicaoTaxaCambioVisitor visitorExibicao = new ExibicaoTaxaCambioVisitor();
 
-	public GerenciadorTaxaCambioVisitor() {
+	public GerenciadorTaxaCambio() {
 		fabricas.put("USD", new DolarAmericanoFactory());
 		fabricas.put("EUR", new EuroFactory());
 		fabricas.put("GBP", new LibraEsterlinaFactory());
@@ -23,27 +23,25 @@ public class GerenciadorTaxaCambioVisitor {
 		return taxa;
 	}
 
-	public void atualizarTaxa(String moeda, double novoValorEmReais) {
-		for (TaxaCambio taxa : taxas) {
-			if (taxa.getMoeda().equalsIgnoreCase(moeda)) {
-				taxa.setValorEmReais(novoValorEmReais);
-				return;
-			}
-		}
-
-		System.out.println("Moeda nao encontrada no gerenciador: " + moeda);
-	}
-
 	public List<TaxaCambio> listarTaxas() {
 		return List.copyOf(taxas);
 	}
 
-	public void exibirPainel() {
-		System.out.println("=== Gerenciador de Taxa de Cambio (Visitor) ===");
-		for (TaxaCambio taxa : taxas) {
-			System.out.println(taxa.aceitar(visitorExibicao));
+	@Override
+	public Iterator<TaxaCambio> iterator() {
+		return taxas.iterator();
+	}
+
+	public String exibirTaxas() {
+		StringBuilder saida = new StringBuilder();
+		for (TaxaCambio taxa : this) {
+			saida.append("Moeda: ")
+				.append(taxa.getMoeda())
+				.append(" | Taxa: ")
+				.append(taxa.getValorFormatado())
+				.append(System.lineSeparator());
 		}
-		System.out.println("=============================================");
+		return saida.toString().trim();
 	}
 
 	private TaxaCambio criarTaxa(String moeda, double valorEmReais) {
