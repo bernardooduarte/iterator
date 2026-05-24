@@ -1,1 +1,1 @@
-# Padr�o Iterator    
+﻿# Padrão Iterator
